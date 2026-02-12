@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import "tailwindcss";
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-10deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(10deg);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes celebrate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.4) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
   }
 }
 
-.card {
-  padding: 2em;
+@keyframes angry-shake {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
 }
 
-.read-the-docs {
-  color: #888;
+.teddy-angry {
+  animation: angry-shake 0.3s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+  line-height: 1;
+}
+
+.teddy-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.teddy-celebrate {
+  animation: celebrate 0.6s linear infinite;
+  display: inline-block;
+  transform-origin: center;
+  line-height: 1;
 }
