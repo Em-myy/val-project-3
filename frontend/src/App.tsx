@@ -156,7 +156,7 @@ function App() {
                 Will You Be My Val? 🌹
               </h1>
               <p className="text-gray-500 font-medium">
-                I promise I'm nice and I'm gentle...
+                I'd choose you all over again. 💍✨
               </p>
             </div>
 
